@@ -68,4 +68,13 @@ public class StudentController {
     }
 
 
+    @GetMapping("/associate")
+    public List<Associate> getAssociate(){
+        return Arrays.asList(
+                new Associate("Kabil", "Engineer", "Assembly", 90000),
+                new Associate("Jaysheelan", "Engineer", "Machining", 80678)
+        );
+    }
+
+
 }
