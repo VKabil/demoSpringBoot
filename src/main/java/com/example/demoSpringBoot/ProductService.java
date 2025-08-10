@@ -8,18 +8,16 @@ import java.util.List;
 
 @Service
 public class ProductService {
-    public List<Product> products = new ArrayList<>();
 
-    public ProductService(){
-        products.add(new Product("Samsung", "M35", 19899));
-        products.add(new Product("Apple", "16pro", 58956));
-    }
 
     public List<Product> getAllProduct(){
-        return products;
+        return Arrays.asList(
+                new Product("Samsung", "M35", 18759),
+                new Product("Motorola", "G50", 21499)
+        );
     }
 
-    public void addProduct(Product product){
-        products.add(product);
-    }
+//    public String addProduct(Product product){
+//        return "Hello";
+//    }
 }

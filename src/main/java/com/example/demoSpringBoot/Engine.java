@@ -1,32 +1,35 @@
 package com.example.demoSpringBoot;
 
-import java.util.Date;
-
 public class Engine {
-    private String engineNumber;
-    private String engineModel;
-    private String engineBlockNumber;
-    private String reasonForRejection;
-    private String rejectionDate;
 
-    public Engine(String engineNumber, String engineModel, String engineBlockNumber, String reasonForRejection, String rejectionDate){
+    private int id;
+    private String engineNumber;
+    private String model;
+    private String rejectionLocation;
+    private String reasonForRejection;
+
+    public Engine(int id, String engineNumber, String model, String rejectionLocation, String reasonForRejection){
+        this.id = id;
         this.engineNumber = engineNumber;
-        this.engineModel = engineModel;
-        this.engineBlockNumber = engineBlockNumber;
+        this.model = model;
+        this.rejectionLocation = rejectionLocation;
         this.reasonForRejection = reasonForRejection;
-        this.rejectionDate = rejectionDate;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getEngineNumber() {
         return engineNumber;
     }
 
-    public String getEngineModel() {
-        return engineModel;
+    public String getModel(){
+        return model;
     }
 
-    public String getEngineBlockNumber() {
-        return engineBlockNumber;
+    public String getRejectionLocation() {
+        return rejectionLocation;
     }
 
     public String getReasonForRejection() {
